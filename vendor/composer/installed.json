@@ -1,0 +1,57 @@
+[
+    {
+        "name": "automattic/php-thrift-sql",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/vpg/php-thrift-sql.git",
+            "reference": "ac0b776aa4c679452b5dd6478ff886b9c489d985"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/vpg/php-thrift-sql/zipball/ac0b776aa4c679452b5dd6478ff886b9c489d985",
+            "reference": "ac0b776aa4c679452b5dd6478ff886b9c489d985",
+            "shasum": ""
+        },
+        "archive": {
+            "exclude": [
+                "/src",
+                "/build.php"
+            ]
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2014-12-14 21:14:36",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "files": [
+                "ThriftSQL.phar"
+            ]
+        },
+        "license": [
+            "GPL-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Xiao Yu",
+                "email": "xyu@automattic.com",
+                "homepage": "http://xyu.io",
+                "role": "Developer"
+            }
+        ],
+        "description": "PHP Thrift Client for Impala and Hive Queries",
+        "homepage": "https://github.com/Automattic/php-thrift-sql",
+        "keywords": [
+            "Hive",
+            "Impala",
+            "SQL",
+            "Thrift"
+        ],
+        "support": {
+            "source": "https://github.com/vpg/php-thrift-sql/tree/master"
+        }
+    }
+]

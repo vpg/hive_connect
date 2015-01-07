@@ -1,0 +1,26 @@
+{
+  "name": "vpg/fusion",
+  "description": "Accessing Hive",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Cédric Jimenez",
+      "email": "cjimenez@voyageprive.com"
+    }
+  ],
+  "config": {
+    "github-oauth": {
+      "github.com": "e83779916ec20e58859d8d5f5ead63d0a6780807"
+    }
+  },
+  "repositories": [
+    {
+      "type":"vcs",
+      "url":"https://github.com/vpg/php-thrift-sql"
+    }
+  ],
+  "require": {
+    "automattic/php-thrift-sql": "dev-master"
+  }
+}
