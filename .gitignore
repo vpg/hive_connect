@@ -1,0 +1,8 @@
+vendor/
+
+.idea
+.jscsrc
+.jshintignore
+.jshintrc
+env.php
+composer.lock
