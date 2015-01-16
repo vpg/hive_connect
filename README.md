@@ -46,4 +46,8 @@
 
 3 Tests
 
-  You can run unit tests by running : phpunit test/VpgPdoTest.php
+  You can run unit tests by running : 
+  - phpunit test/VpgDataAccessTest.php
+  - phpunit test/VpgElasticOdbcTest.php
+  - phpunit test/VpgElasticTest.php
+  - phpunit test/VpgHiveTest.php
