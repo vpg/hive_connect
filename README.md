@@ -39,8 +39,9 @@
   putenv('LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libodbcinst.so.1');
   putenv('LD_LIBRARAY_PATH=/usr/lib/x86_64-linux-gnu');
 ```
+
  
-  2.2. Composer
+  2.2 Composer
 
   Install composer dependancies by running : sudo composer install
 
