@@ -41,9 +41,9 @@
 ```
 
  
-  2.2 Composer
+    2.2. Composer
 
-  Install composer dependancies by running : sudo composer install
+    Install composer dependancies by running : sudo composer install
 
 3 Tests
 
