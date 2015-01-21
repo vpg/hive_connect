@@ -13,7 +13,7 @@ class Elastic implements iDriver {
     /**
      * @var \Elasticsearch\Client
      */
-    public $client;
+    public $client = null;
 
     /**
      * Connecting to the Elastic search database
@@ -35,5 +35,26 @@ class Elastic implements iDriver {
     public function query($statement)
     {
         return $this->client->search($statement);
+    }
+    
+    /**
+     * Indicates if the connection is active or not
+     *
+     * @return boolean
+     */
+    public function isConnected()
+    {
+        return ($this->client->transport->getConnection()->isAlive());
+    }
+    
+    /**
+     * Close the connection
+     *
+     * @return boolean
+     */
+    public function closeConnection()
+    {
+        $this->client->transport->getConnection()->markDead();
+        return true;
     }
 }

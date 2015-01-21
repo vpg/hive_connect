@@ -9,7 +9,7 @@ require_once __DIR__.'/../vendor/autoload.php';
 use \Vpg\Driver\Hive;
 use \Vpg\Library\VpgDataAccess;
 
-class VpgDataAccessTest extends PHPUnit_Framework_TestCase {
+class VpgDataAccHiveTest extends PHPUnit_Framework_TestCase {
 
     /**
      * @var Hive
@@ -176,5 +176,12 @@ class VpgDataAccessTest extends PHPUnit_Framework_TestCase {
      */
     public function testSelectWithRightJoin() {
         $this->selectWithJoin('right');
+    }
+
+    /**
+     * Testing if the connection is active
+     */
+    public function testIsConnected() {
+        
     }
 }

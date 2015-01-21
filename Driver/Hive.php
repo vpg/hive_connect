@@ -9,14 +9,14 @@ namespace Vpg\Driver;
 class Hive implements iDriver {
 
     /**
-     * @var PDO
+     * @var \PDO
      */
     public $db = null;
     
     /**
      * Get the PDO
      *
-     * @return PDO
+     * @return \PDO
      */
     public function getDb()
     {
@@ -26,7 +26,7 @@ class Hive implements iDriver {
     /**
      * Store the PDO
      *
-     * @param PDO $db
+     * @param \PDO $db
      */
     public function setDb($db)
     {
@@ -47,6 +47,27 @@ class Hive implements iDriver {
             $this->setDb($db);
         }
     }
+    
+    /**
+     * Indicates if the connection is active or not
+     *
+     * @return boolean
+     */
+    public function isConnected()
+    {
+        return !is_null($this->db);
+    }
+    
+    /**
+     * Close the connection
+     *
+     * @return boolean
+     */
+    public function closeConnection()
+    {
+        $this->db = null;
+        return true;
+    }
 
     /**
      * Execute a query an returns an array
@@ -59,7 +80,10 @@ class Hive implements iDriver {
     {
         $statement = $this->db->query($statement);
         if ($statement) {
-            return $statement->fetchAll();
+            $result = $statement->fetchAll();
+            $statement->closeCursor();
+            $statement = null; // Mandatory for closing connection
+            return $result;
         } else {
             return [];
         }

@@ -7,11 +7,12 @@ require_once __DIR__.'/../env.php';
 require __DIR__.'/../vendor/autoload.php';
 
 use \Vpg\Library\VpgDataAccess;
+use \Vpg\Driver\Elastic;
 
-class VpgElasticTest extends PHPUnit_Framework_TestCase {
+class VpgDataAccElasticTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * @var \Vpg\Driver\Elastic
+     * @var Elastic
      */
     public $driver = null;
 
@@ -26,13 +27,13 @@ class VpgElasticTest extends PHPUnit_Framework_TestCase {
     public function getDriver()
     {
         if (is_null($this->driver)) {
-            $this->driver = new \Vpg\Driver\Elastic();
+            $this->driver = new Elastic();
         }
         return $this->driver;
     }
 
     /**
-     * @param \Vpg\Driver\Elastic $driver
+     * @param Elastic $driver
      */
     public function setDriver($driver)
     {

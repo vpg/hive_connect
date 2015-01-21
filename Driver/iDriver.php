@@ -23,5 +23,18 @@ interface iDriver {
      * @return mixed
      */
     public function query($statement);
-    
+
+    /**
+     * Indicates if the connection is active or not
+     *
+     * @return boolean
+     */
+    public function isConnected();
+
+    /**
+     * Close the connection
+     *
+     * @return boolean
+     */
+    public function closeConnection();
 }
