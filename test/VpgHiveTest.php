@@ -3,7 +3,7 @@
  * User: cjimenez
  * Date: 07/01/15 18:01
  */
-//require_once __DIR__.'/../vendor/autoload.php';
+require_once __DIR__.'/../vendor/autoload.php';
 require_once __DIR__.'/../env.php';
 
 class VpgHiveTest extends PHPUnit_Framework_TestCase {
@@ -91,12 +91,12 @@ class VpgHiveTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-//     * Testing a select with join
-//     *
-//     * @var string $type
-//     *
-//     * @depends testConnection
-//     */
+     * Testing a select with join
+     *
+     * @var string $type
+     *
+     * @depends testConnection
+     */
     private function selectWithJoin($type) {
         $result = $this->connect()
             ->query(

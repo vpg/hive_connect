@@ -4,11 +4,9 @@
  * Date: 14/01/15 15:15
  */
 
-namespace Driver;
+namespace Vpg\Driver;
 
-require_once 'iDriver.php';
-
-class Hive implements \iDriver {
+class Hive implements iDriver {
 
     /**
      * @var PDO
@@ -16,14 +14,18 @@ class Hive implements \iDriver {
     public $db = null;
     
     /**
+     * Get the PDO
+     *
      * @return PDO
      */
     public function getDb()
     {
         return $this->db;
     }
-    
+
     /**
+     * Store the PDO
+     *
      * @param PDO $db
      */
     public function setDb($db)
@@ -49,7 +51,7 @@ class Hive implements \iDriver {
     /**
      * Execute a query an returns an array
      *
-     * @param $statement
+     * @param string $statement
      *
      * @return array
      */

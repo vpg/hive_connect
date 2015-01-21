@@ -4,13 +4,15 @@
  * Date: 07/01/15 18:01
  */
 require_once __DIR__.'/../env.php';
-require_once __DIR__.'/../Library/VpgDataAccess.php';
-require_once __DIR__.'/../Driver/Hive.php';
+require_once __DIR__.'/../vendor/autoload.php';
+
+use \Vpg\Driver\Hive;
+use \Vpg\Library\VpgDataAccess;
 
 class VpgDataAccessTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * @var \Driver\Hive
+     * @var Hive
      */
     public $driverHive = null;
 
@@ -20,18 +22,18 @@ class VpgDataAccessTest extends PHPUnit_Framework_TestCase {
     public $da = null;
     
     /**
-     * @return \Driver\Hive
+     * @return Hive
      */
     public function getDriverHive()
     {
         if (is_null($this->driverHive)) {
-            $this->driverHive = new \Driver\Hive();
+            $this->driverHive = new Hive();
         }
         return $this->driverHive;
     }
     
     /**
-     * @param \Driver\Hive $driverHive
+     * @param Hive $driverHive
      */
     public function setDriverHive($driverHive)
     {
