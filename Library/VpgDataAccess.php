@@ -4,6 +4,8 @@
  * Date: 14/01/15 15:20
  */
 
+namespace Vpg\Library;
+
 class VpgDataAccess {
     
     public $driver;

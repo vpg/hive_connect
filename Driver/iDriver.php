@@ -4,17 +4,24 @@
  * Date: 14/01/15 15:16
  */
 
+namespace Vpg\Driver;
+
 interface iDriver {
 
     /**
-     * Based on PDO fetch styles : Way of returning data
+     * Connection on the desired driver
      *
-     * @link http://php.net/manual/fr/pdostatement.fetch.php
+     * @return mixed
      */
-    const FETCH_OBJ = 1;
-    const FETCH_ASSOC = 2;
-    const FETCH_BOTH = 3;
-
     public function connect();
+
+    /**
+     * Executing a query on the selcted connection and returns the result
+     *
+     * @param string $statement
+     *
+     * @return mixed
+     */
     public function query($statement);
+    
 }

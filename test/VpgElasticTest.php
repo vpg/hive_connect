@@ -3,15 +3,15 @@
  * User: cjimenez
  * Date: 15/01/15 16:45
  */
-require_once __DIR__.'/../vendor/autoload.php';
-require_once __DIR__.'/../Library/VpgDataAccess.php';
-require_once __DIR__.'/../Driver/Elastic.php';
 require_once __DIR__.'/../env.php';
+require __DIR__.'/../vendor/autoload.php';
+
+use \Vpg\Library\VpgDataAccess;
 
 class VpgElasticTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * @var \Driver\Elastic
+     * @var \Vpg\Driver\Elastic
      */
     public $driver = null;
 
@@ -21,18 +21,18 @@ class VpgElasticTest extends PHPUnit_Framework_TestCase {
     public $da = null;
 
     /**
-     * @return \Driver\Hive
+     * @return \Vpg\Driver\Hive
      */
     public function getDriver()
     {
         if (is_null($this->driver)) {
-            $this->driver = new \Driver\Elastic();
+            $this->driver = new \Vpg\Driver\Elastic();
         }
         return $this->driver;
     }
 
     /**
-     * @param \Driver\Elastic $driver
+     * @param \Vpg\Driver\Elastic $driver
      */
     public function setDriver($driver)
     {
