@@ -39,11 +39,16 @@
   putenv('LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libodbcinst.so.1');
   putenv('LD_LIBRARAY_PATH=/usr/lib/x86_64-linux-gnu');
 ```
- 
-  2.2. Composer
 
-  Install composer dependancies by running : sudo composer install
+ 
+    2.2. Composer
+
+    Install composer dependancies by running : sudo composer install
 
 3 Tests
 
-  You can run unit tests by running : phpunit test/VpgPdoTest.php
+  You can run unit tests by running : 
+  - phpunit test/VpgDataAccessTest.php
+  - phpunit test/VpgElasticOdbcTest.php
+  - phpunit test/VpgElasticTest.php
+  - phpunit test/VpgHiveTest.php
