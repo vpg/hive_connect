@@ -6,7 +6,7 @@
 
 namespace Vpg\Library;
 
-class VpgDataAccess {
+class DataAccess {
     
     public $driver;
 

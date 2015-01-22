@@ -40,15 +40,21 @@
   putenv('LD_LIBRARAY_PATH=/usr/lib/x86_64-linux-gnu');
 ```
 
- 
+
     2.2. Composer
 
     Install composer dependancies by running : sudo composer install
+
+    
+    2.3 Install ODBC Driver for hive
+    
+    Download the correct version here : http://www.cloudera.com/content/cloudera/en/downloads/connectors/hive/odbc/hive-odbc-v2-5-13.html
+    Follow the installation guide : http://www.cloudera.com/content/cloudera/en/documentation/connectors/latest/PDF/Cloudera-ODBC-Driver-for-Apache-Hive-Install-Guide.pdf
 
 3 Tests
 
   You can run unit tests by running : 
   - phpunit test/VpgDataAccessTest.php
-  - phpunit test/VpgElasticOdbcTest.php
+  - phpunit test/ElasticOdbcTest.php
   - phpunit test/VpgElasticTest.php
   - phpunit test/VpgHiveTest.php

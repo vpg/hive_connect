@@ -7,9 +7,9 @@ require_once __DIR__.'/../env.php';
 require_once __DIR__.'/../vendor/autoload.php';
 
 use \Vpg\Driver\Hive;
-use \Vpg\Library\VpgDataAccess;
+use \Vpg\Library\DataAccess;
 
-class VpgDataAccHiveTest extends PHPUnit_Framework_TestCase {
+class DataAccHiveTest extends PHPUnit_Framework_TestCase {
 
     /**
      * @var Hive
@@ -17,7 +17,7 @@ class VpgDataAccHiveTest extends PHPUnit_Framework_TestCase {
     public $driverHive = null;
 
     /**
-     * @var VpgDataAccess
+     * @var DataAccess
      */
     public $da = null;
     
@@ -27,7 +27,7 @@ class VpgDataAccHiveTest extends PHPUnit_Framework_TestCase {
     public function getDriverHive()
     {
         if (is_null($this->driverHive)) {
-            $this->driverHive = new Hive();
+            $this->driverHive = new Hive(DATA_SERVER, HIVE_PORT, 'HIVE_USER', HIVE_PASS, 'MyHive');
         }
         return $this->driverHive;
     }
@@ -41,18 +41,18 @@ class VpgDataAccHiveTest extends PHPUnit_Framework_TestCase {
     }
     
     /**
-     * @return VpgDataAccess
+     * @return DataAccess
      */
     public function getDa()
     {
         if (is_null($this->da)) {
-            $this->da = new VpgDataAccess($this->getDriverHive());
+            $this->da = new DataAccess($this->getDriverHive());
         }
         return $this->da;
     }
     
     /**
-     * @param VpgDataAccess $da
+     * @param DataAccess $da
      */
     public function setDa($da)
     {

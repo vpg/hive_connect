@@ -6,7 +6,7 @@
 //require_once __DIR__.'/../vendor/autoload.php';
 require_once __DIR__.'/../env.php';
 
-class VpgElasticOdbcTest extends PHPUnit_Framework_TestCase {
+class ElasticOdbcTest extends PHPUnit_Framework_TestCase {
 
     private $timeStart;
     

@@ -9,6 +9,16 @@ namespace Vpg\Driver;
 interface iDriver {
 
     /**
+     * @param string $server Server address (ip or dns name)
+     * @param int    $port   Port to connect
+     * @param string $user   Username to connect
+     * @param string $pass   Password to connect
+     * @param string $name   Connection name
+     *
+     */
+    public function __construct($server, $port, $user, $pass, $name = null);
+    
+    /**
      * Connection on the desired driver
      *
      * @return mixed
