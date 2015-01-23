@@ -52,6 +52,10 @@ Download the correct version here : http://www.cloudera.com/content/cloudera/en/
 
 Follow the installation guide : http://www.cloudera.com/content/cloudera/en/documentation/connectors/latest/PDF/Cloudera-ODBC-Driver-for-Apache-Hive-Install-Guide.pdf
 
+2.4 Install odbc for php
+
+apt-get install php5-odbc
+
 3 Tests
 
   You can run unit tests by running : 
